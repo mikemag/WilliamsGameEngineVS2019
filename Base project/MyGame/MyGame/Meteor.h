@@ -10,6 +10,8 @@ public:
   // Functions overridden from GameObject:
   void draw();
   void update(sf::Time& elapsed);
+  sf::FloatRect getCollisionRect(); 
+  void handleCollision(GameObject& otherGameObject);
 
 private:
   sf::Sprite sprite_;

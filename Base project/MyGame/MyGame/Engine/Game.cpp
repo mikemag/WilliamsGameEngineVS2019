@@ -12,6 +12,7 @@ void Game::initialize(int windowWidth, int windowHeight, std::string windowTitle
 	initialized_ = true;
 
 	// Create the render window.
+	//window_.create(sf::VideoMode::getDesktopMode(), windowTitle, sf::Style::Fullscreen);
 	window_.create(sf::VideoMode(windowWidth, windowHeight), windowTitle);
 	window_.setFramerateLimit(FRAMES_PER_SECOND);
 }

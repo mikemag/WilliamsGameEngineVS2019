@@ -12,6 +12,8 @@ void update(sf::Time& elapsed);
 
 private:
   void SetUpExplosionAnimation();
+
+  sf::Sound boom_;
 };
 
 typedef std::shared_ptr<Explosion> ExplosionPtr;

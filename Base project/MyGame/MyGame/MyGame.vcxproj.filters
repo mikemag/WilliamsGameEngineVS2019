@@ -71,4 +71,9 @@
       <Filter>Resources</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\boom.wav">
+      <Filter>Resources</Filter>
+    </Media>
+  </ItemGroup>
 </Project>

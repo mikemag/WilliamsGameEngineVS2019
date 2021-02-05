@@ -116,6 +116,9 @@
     <Image Include="Resources\meteor.png" />
     <Image Include="Resources\ship.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\boom.wav" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

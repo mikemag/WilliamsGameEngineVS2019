@@ -1,4 +1,5 @@
 #include "Meteor.h"
+#include "Explosion.h"
 
 const float SPEED = 0.25f;
 
@@ -35,4 +36,12 @@ void Meteor::handleCollision(GameObject& otherGameObject) {
   }
   
   makeDead();
+
+  // This is the part that is left out of the tutorial. It's similar to creating a laser in Ship.cpp
+  sf::Vector2f pos = sprite_.getPosition();
+  sf::FloatRect bounds = sprite_.getGlobalBounds();
+  float laserX = pos.x + (bounds.width / 2.0f);
+  float laserY = pos.y + (bounds.height / 2.0f);
+  ExplosionPtr ex = std::make_shared<Explosion>(sf::Vector2f(laserX, laserY));
+  GAME.getCurrentScene().addGameObject(ex);
 }

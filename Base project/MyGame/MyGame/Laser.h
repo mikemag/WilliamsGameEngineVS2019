@@ -2,18 +2,16 @@
 
 #include "Engine/GameEngine.h"
 
-class Ship : public GameObject {
+class Laser : public GameObject {
 public:
-  // Creates our ship. 
-  Ship();
+  // Creates our Laser.
+  Laser(sf::Vector2f pos);
 
   // Functions overridden from GameObject: 
   void draw();
   void update(sf::Time& elapsed);
-
 private:
   sf::Sprite sprite_;
-  int fireTimer_ = 0;
 };
-  
-typedef std::shared_ptr<Ship> ShipPtr;
+
+typedef std::shared_ptr<Laser> LaserPtr;

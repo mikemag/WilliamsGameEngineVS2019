@@ -1,5 +1,6 @@
 #include "Meteor.h"
 #include "Explosion.h"
+#include "GameScene.h"
 
 const float SPEED = 0.25f;
 
@@ -36,6 +37,10 @@ void Meteor::handleCollision(GameObject& otherGameObject) {
   }
   
   makeDead();
+
+  // This part is also missing: described, but not shown.
+  GameScene& scene = (GameScene&)GAME.getCurrentScene();
+  scene.increaseScore();
 
   // This is the part that is left out of the tutorial. It's similar to creating a laser in Ship.cpp
   sf::Vector2f pos = sprite_.getPosition();

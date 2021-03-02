@@ -8,7 +8,7 @@ Meteor::Meteor(sf::Vector2f pos) {
   sprite_.setTexture(GAME.getTexture("Resources/meteor.png"));
   sprite_.setPosition(pos);
   assignTag("meteor");
-  setCollisionCheckEnabled(true);
+  setCollisionCheckEnabled(true); // NB: he doesn't show putting this one here!
 }
 
 void Meteor::draw() {
